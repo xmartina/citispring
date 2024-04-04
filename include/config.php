@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 define("WEB_TITLE","City Spring Bank"); // Change Bank Name
 define("WEB_URL","https://dashboard.citispring.online"); // Change No "/" Ending splash
