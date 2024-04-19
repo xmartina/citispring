@@ -23,9 +23,9 @@ if ($row['transfer'] == '0') {
 }
 
 if ($row['trans_code_type'] == '1') {
-    $transfer = "Single Pin";
+    $trans_code_type = "Single Pin";
 } elseif ($row['trans_code_type'] == '2') {
-    $transfer = "Multi Pin";
+    $trans_code_type = "Multi Pin";
 }
 
 if (isset($_POST['upload_picture'])) {
@@ -607,8 +607,8 @@ if (isset($_POST['transfer'])) {
                                                 <label for="">SELECT TRANSACTION CODE TYPE</label>
                                                 <select name="trans_code_type" class="form-control  basic">
                                                     <option value="<?= $row['trans_code_type'] ?>">Select</option>
-                                                    <option value="1">ACTIVE</option>
-                                                    <option value="0">DEACTIVATE</option>
+                                                    <option value="1">Single Pin</option>
+                                                    <option value="2">Multi Pin</option>
                                                 </select>
                                             </div>
                                             <div class=" text-center">
