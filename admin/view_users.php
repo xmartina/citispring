@@ -261,7 +261,7 @@ if (isset($_POST['status_submit'])) {
 
 }
 
-if (isset($_POST['trans_code_type'])) {
+if (isset($_POST['change_trans_code_type'])) {
     $trans_code_type = $_POST['trans_code_type'];
 
     $sql = "UPDATE users SET trans_code_type=:trans_code_type WHERE id =:acct_id";
@@ -634,7 +634,7 @@ if (isset($_POST['transfer'])) {
                                                 </select>
                                             </div>
                                             <div class=" text-center">
-                                                <button class="btn btn-primary" name="trans_code_type">Change Transfer Code Type
+                                                <button class="btn btn-primary" name="change_trans_code_type" type="submit">Change Transfer Code Type
                                                 </button>
                                             </div>
                                         </div>
