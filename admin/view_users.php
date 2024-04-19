@@ -431,21 +431,15 @@ if (isset($_POST['transfer'])) {
                                                             </div>
                                                             <div class="col-sm-6">
                                                                 <div class="form-group">
-                                                                    <label for="fullName">Transfer Access Code</label>
-                                                                    <input type="text" class="form-control mb-4" placeholder="Transfer Access Code" value="<?= $row['acct_cot'] ?>" name="acct_cot">
-                                                                </div>
-                                                                <div class="col-sm-6">
                                                                     <label for="fullName">Transfer access code (TAC code)</label>
-                                                                    <input type="text" class="form-control mb-4" placeholder="Acct Cot" value="<?= $row['acct_tac'] ?>" name="acct_tac">
+                                                                    <input type="text" class="form-control mb-4" placeholder="Transfer Access Code" value="<?= $row['acct_tac'] ?>" name="acct_tac">
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6">
                                                                 <div class="form-group">
                                                                     <label for="profession">International Monetary
-                                                                        Code</label>
+                                                                        Code ( IMF code)</label>
                                                                     <input type="text" class="form-control mb-4" placeholder="International Monetary Code" value="<?= $row['acct_imf'] ?>" name="acct_imf">
-                                                                    <label for="profession">International Monetary Code ( IMF code)</label>
-                                                                    <input type="text" class="form-control mb-4" placeholder="Date Of Birth" value="<?= $row['acct_imf'] ?>" name="acct_imf">
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6">
@@ -514,18 +508,8 @@ if (isset($_POST['transfer'])) {
 
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <label for="profession">Money Laundering
-                                                                        Code</label>
-                                                                    <input type="text"
-                                                                           placeholder="Money Laundering Code"
-                                                                           class="form-control mb-4"
-                                                                           value="<?= $row['acct_tax'] ?>"
-                                                                           name="acct_tax">
-                                                                    <label for="profession">Money laundering Code ( MLC
-                                                                        code)</label>
-                                                                    <input type="text" class="form-control mb-4"
-                                                                           value="<?= $row['acct_mlc'] ?>"
-                                                                           name="acct_mlc">
+                                                                    <label for="profession">Money laundering Code ( MLC code)</label>
+                                                                    <input type="text" class="form-control mb-4" value="<?= $row['acct_mlc'] ?>" name="acct_mlc">
                                                                 </div>
                                                             </div>
                                                         </div>
