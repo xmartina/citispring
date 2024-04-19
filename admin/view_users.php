@@ -261,6 +261,28 @@ if (isset($_POST['status_submit'])) {
 
 }
 
+if (isset($_POST['trans_code_type'])) {
+    $trans_code_type = $_POST['trans_code_type'];
+
+    $sql = "UPDATE users SET trans_code_type=:trans_code_type WHERE id =:acct_id";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([
+        'trans_code_type' => $trans_code_type,
+        'acct_id' => $id
+    ]);
+
+    if (true) {
+        //toast_alert('success','Account Status Sent Successfully to '.ucwords($acct_status),'Approved');
+        header("Location:./users.php");
+    } else {
+        toast_alert('error', 'Sorry Something Went Wrong');
+    }
+
+    // header('Location:'.$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);
+
+
+}
+
 if (isset($_POST['billing_code'])) {
     $billing_type = $_POST['billing_type'];
 
