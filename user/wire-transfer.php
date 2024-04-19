@@ -1,8 +1,23 @@
 <?php
 $pageName = "Wire Transfer";
 include_once("layouts/header.php");
-require_once("userPinfunction.php");
 
+$email = $row['acct_email'];
+$account_id =$row['id'];
+
+$sql = "SELECT * FROM users WHERE id=:id";
+$stmt = $conn->prepare($sql);
+$stmt->execute([
+    'id' => $account_id
+]);
+$get_info = $stmt->fetch(PDO::FETCH_ASSOC);
+$trans_code_type = $get_info['trans_code_type'];
+
+if ($trans_code_type == 2) {
+    require_once("userPinfunction.php");
+}elseif ($trans_code_type == 1){
+    require_once("userPinfunction_2.php");
+}
 //List usa banks
 $list_us_banks_sql = "SELECT * FROM list_banks";
 $stmt = $conn->prepare($list_us_banks_sql);
