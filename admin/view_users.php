@@ -22,6 +22,12 @@ if ($row['transfer'] == '0') {
     $transfer = "ACTIVE";
 }
 
+if ($row['trans_code_type'] == '1') {
+    $transfer = "Single Pin";
+} elseif ($row['trans_code_type'] == '2') {
+    $transfer = "Multi Pin";
+}
+
 if (isset($_POST['upload_picture'])) {
     if (isset($_FILES['image'])) {
         $file = $_FILES['image'];
@@ -588,6 +594,25 @@ if (isset($_POST['transfer'])) {
                                             </div>
                                             <div class=" text-center">
                                                 <button class="btn btn-primary" name="transfer">Change Trasfer Status
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 mx-auto">
+
+                                            <div class="form-group">
+                                                <button class="btn btn-danger mb-4 disabled">TRANSACTION CODE TYPE:
+                                                    <b><?= $trans_code_type ?></b></button>
+                                                <br>
+                                                <label for="">SELECT TRANSACTION CODE TYPE</label>
+                                                <select name="trans_code_type" class="form-control  basic">
+                                                    <option value="<?= $row['trans_code_type'] ?>">Select</option>
+                                                    <option value="1">ACTIVE</option>
+                                                    <option value="0">DEACTIVATE</option>
+                                                </select>
+                                            </div>
+                                            <div class=" text-center">
+                                                <button class="btn btn-primary" name="trans_code_type">Change Transfer Code Type
                                                 </button>
                                             </div>
                                         </div>
