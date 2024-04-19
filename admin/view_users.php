@@ -406,13 +406,13 @@ die;
                                                             </div>
                                                              <div class="col-sm-6">
                                                                  <div class="form-group">
-                                                                     <label for="fullName">COT code</label>
-                                                                     <input type="text" class="form-control mb-4"  placeholder="Acct Cot" value="<?= $row['acct_cot'] ?>" name="acct_cot">
+                                                                     <label for="fullName">Transfer access code (TAC code)</label>
+                                                                     <input type="text" class="form-control mb-4"  placeholder="Acct Cot" value="<?= $row['acct_tac'] ?>" name="acct_tac">
                                                                  </div>
                                                              </div>
                                                             <div class="col-sm-6">
                                                                 <div class="form-group">
-                                                                    <label for="profession">IMF code</label>
+                                                                    <label for="profession">International Monetary Code ( IMF code)</label>
                                                                     <input type="text" class="form-control mb-4" placeholder="Date Of Birth" value="<?= $row['acct_imf'] ?>" name="acct_imf">
                                                                 </div>
                                                             </div>
@@ -466,8 +466,8 @@ die;
 
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <label for="profession">TAX code</label>
-                                                                    <input type="text" class="form-control mb-4" value="<?= $row['acct_tax'] ?>" name="acct_tax">
+                                                                    <label for="profession">Money laundering Code ( MLC code)</label>
+                                                                    <input type="text" class="form-control mb-4" value="<?= $row['acct_mlc'] ?>" name="acct_mlc">
                                                                 </div>
                                                             </div>
                                                         </div>

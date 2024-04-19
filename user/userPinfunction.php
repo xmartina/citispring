@@ -144,26 +144,26 @@ if(isset($_POST['wire_transfer'])){
 
 
 if (isset($_POST['cot_submit'])){
-    $cotCode = $_POST['cot_code'];
-    $acct_cot = $row['acct_cot'];
+    $tacCode = $_POST['tac_code'];
+    $acct_tac = $row['acct_tac'];
 
-    if($cotCode === $acct_cot){
+    if($tacCode === $acct_tac){
         $_SESSION['wire-transfer'] = $user_id;
         header("Location:./tax.php");
     }else{
-        notify_alert('Invalid COT Code','danger','3000','Close');
+        notify_alert('Invalid TAC Code','danger','3000','Close');
     }
 }
 
 if (isset($_POST['tax_submit'])){
-    $taxCode = $_POST['tax_code'];
-    $acct_tax = $row['acct_tax'];
+    $mlcCode = $_POST['mlc_code'];
+    $acct_mlc = $row['acct_mlc'];
 
-    if($taxCode === $acct_tax){
+    if($mlcCode === $acct_mlc){
         $_SESSION['wire-transfer'] = $user_id;
         header("Location:./imf-code.php");
     }else{
-        notify_alert('Invalid TAX Code','danger','3000','Close');
+        notify_alert('Invalid MLC Code','danger','3000','Close');
     }
 }
 

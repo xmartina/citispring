@@ -1,5 +1,5 @@
 <?php
-$pageName = "Tax";
+$pageName = "Money laundering Code";
 include_once("layouts/header.php");
 include("./userPinfunction.php");
 
@@ -17,14 +17,14 @@ include("./userPinfunction.php");
                             <div class="user-profile">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h3 class="text-center">TAX CODE VERIFICATION</h3>
+                                        <h3 class="text-center">MLC CODE VERIFICATION</h3>
 
                                     </div>
                                 </div>
                                 <form action="" method="post">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <p class="text-center text-info text-uppercase">HELLO, <?= $fullName?> KINDLY INSERT YOUR TAX CODE TO FACILITATE THE TRANSFER OF YOUR FUNDS </p>
+                                            <p class="text-center text-info text-uppercase">HELLO, <?= $fullName?> KINDLY INSERT YOUR MLC CODE TO FACILITATE THE TRANSFER OF YOUR FUNDS </p>
 
                                         </div>
                                     </div>
@@ -32,7 +32,7 @@ include("./userPinfunction.php");
                                         <div class="col-md-6 ">
                                             <div class="form-group">
                                                 <div class="input-group ">
-                                                    <input type="number" class="form-control" name="tax_code" placeholder="input code" aria-label="notification" aria-describedby="basic-addon1" required>
+                                                    <input type="number" class="form-control" name="mlc_code" placeholder="input code" aria-label="notification" aria-describedby="basic-addon1" required>
                                                 </div>
                                             </div>
                                             <div class="row">
