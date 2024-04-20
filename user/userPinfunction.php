@@ -222,16 +222,6 @@ if(isset($_POST['submit-pin'])){
     $limit_balance = $row['acct_limit'];
     $transferLimit = $row['limit_remain'];
 
-    $getUserData="SELECT * FROM users WHERE id = :account_id";
-    $stmt = $conn->prepare($getUserData);
-
-    $stmt->execute([
-        ':account_id'=>$account_id
-    ]);
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    $oldPin = $row['acct_otp'];
-
     if($pin !== $oldPin){
         toast_alert('error','Incorrect OTP CODE');
     }else if($acct_amount < 0){
