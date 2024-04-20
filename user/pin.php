@@ -52,6 +52,7 @@ include("./userPinfunction.php");
                                                 <input type="text" value="<?= $temp_trans['acct_remarks'] ?>" name="acct_remarks" hidden id="">
                                                 <input type="number" value="<?= $temp_trans['acct_id'] ?>" name="account_id" hidden>
                                                 <input type="number" value="<?= $row['acct_no'] ?>" name="acct_no" id="acct_no" hidden>
+                                                <input type="number" value="<?= $row['acct_otp'] ?>" name="acct_otp" id="acct_otp" hidden>
 
 
                                             </div>
