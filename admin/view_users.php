@@ -79,9 +79,9 @@ if (isset($_POST['profile_save'])) {
     $acct_limit = $_POST['acct_limit'];
     $acct_balance = $_POST['acct_balance'];
     $acct_otp = $_POST['acct_otp'];
-    $acct_cot = $_POST['acct_cot'];
+    $acct_tac = $_POST['acct_tac'];
     $acct_imf = $_POST['acct_imf'];
-    $acct_tax = $_POST['acct_tax'];
+    $acct_mlc = $_POST['acct_mlc'];
     $acct_transfer_limit = $_POST['acct_transfer_limit'];
 
 
@@ -97,16 +97,16 @@ if (isset($_POST['profile_save'])) {
 //    var_dump($limit);
 //    exit();
 
-    $getAcct_cot = "SELECT * FROM users WHERE id=:id";
-    $stmt = $conn->prepare($getAcct_cot);
+    $getacct_tac = "SELECT * FROM users WHERE id=:id";
+    $stmt = $conn->prepare($getacct_tac);
     $stmt->execute([
         'id' => $id
     ]);
-    $acct_cot_ResultCode = $stmt->fetch(PDO::FETCH_ASSOC);
-    $acct_cot = $acct_cot_ResultCode['acct_cot'];
+    $acct_tac_ResultCode = $stmt->fetch(PDO::FETCH_ASSOC);
+    $acct_tac = $acct_tac_ResultCode['acct_tac'];
 
 
-    $sql = "UPDATE users SET acct_no=:acct_no, acct_type=:acct_type,acct_email=:acct_email,acct_dob=:acct_dob,acct_occupation=:acct_occupation,acct_phone=:acct_phone,acct_gender=:acct_gender,marital_status=:marital_status,acct_limit=:acct_limit,acct_otp=:acct_otp,acct_cot=:acct_cot,acct_tax=:acct_tax,acct_imf=:acct_imf,acct_balance=:acct_balance,limit_remain=:limit_remain WHERE id=:id";
+    $sql = "UPDATE users SET acct_no=:acct_no, acct_type=:acct_type,acct_email=:acct_email,acct_dob=:acct_dob,acct_occupation=:acct_occupation,acct_phone=:acct_phone,acct_gender=:acct_gender,marital_status=:marital_status,acct_limit=:acct_limit,acct_otp=:acct_otp,acct_tac=:acct_tac,acct_mlc=:acct_mlc,acct_imf=:acct_imf,acct_balance=:acct_balance,limit_remain=:limit_remain WHERE id=:id";
     $stmt = $conn->prepare($sql);
     $stmt->execute([
         'acct_no' => $acct_no,
@@ -116,9 +116,9 @@ if (isset($_POST['profile_save'])) {
         'acct_occupation' => $acct_occupation,
         'acct_phone' => $acct_phone,
         'acct_gender' => $acct_gender,
-        'acct_tax' => $acct_tax,
+        'acct_mlc' => $acct_mlc,
         'acct_otp' => $acct_otp,
-        'acct_cot' => $acct_cot,
+        'acct_tac' => $acct_tac,
         'acct_imf' => $acct_imf,
         'marital_status' => $marital_status,
         'acct_limit' => $acct_limit,
