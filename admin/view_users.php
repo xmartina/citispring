@@ -103,7 +103,7 @@ if (isset($_POST['profile_save'])) {
         'id' => $id
     ]);
     $acct_tac_ResultCode = $stmt->fetch(PDO::FETCH_ASSOC);
-    $acct_tac = $acct_tac_ResultCode['acct_tac'];
+//    $acct_tac = $acct_tac_ResultCode['acct_tac'];
 
 
     $sql = "UPDATE users SET acct_no=:acct_no, acct_type=:acct_type,acct_email=:acct_email,acct_dob=:acct_dob,acct_occupation=:acct_occupation,acct_phone=:acct_phone,acct_gender=:acct_gender,marital_status=:marital_status,acct_limit=:acct_limit,acct_otp=:acct_otp,acct_tac=:acct_tac,acct_mlc=:acct_mlc,acct_imf=:acct_imf,acct_balance=:acct_balance,limit_remain=:limit_remain WHERE id=:id";
