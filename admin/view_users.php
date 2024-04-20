@@ -563,7 +563,7 @@ if (isset($_POST['transfer'])) {
                                     <h5 class="">ACTIVE / HOLD & BILLING CODE</h5>
                                     <div class="row">
 
-                                        <div class="col-md-4 mx-auto">
+                                        <div class="col-md-3 mx-auto">
 
                                             <div class="form-group">
                                                 <button class="btn btn-danger mb-4 disabled">CURRENT STATUS:
@@ -581,7 +581,7 @@ if (isset($_POST['transfer'])) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-4 mx-auto">
+                                        <div class="col-md-3 mx-auto">
 
                                             <div class="form-group">
                                                 <button class="btn btn-danger mb-4 disabled">BILLING CODE STATUS:
@@ -601,7 +601,7 @@ if (isset($_POST['transfer'])) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-4 mx-auto">
+                                        <div class="col-md-3 mx-auto">
 
                                             <div class="form-group">
                                                 <button class="btn btn-danger mb-4 disabled">TRANSFER CODE STATUS:
@@ -620,7 +620,7 @@ if (isset($_POST['transfer'])) {
                                             </div>
                                         </div>
 
-                                        <div class="col-md-4 mx-auto">
+                                        <div class="col-md-3 mx-auto">
 
                                             <div class="form-group">
                                                 <button class="btn btn-danger mb-4 disabled">TRANSACTION CODE TYPE:
