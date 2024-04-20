@@ -57,6 +57,9 @@ if(isset($_POST['wire_transfer'])){
         ]);
 
         if (true) {
+
+//            OTP Code generator removed by me
+            /*
             $acct_otp = substr(number_format(time() * rand(), 0, '', ''), 0, 6);
 
             $sql =  "UPDATE users SET acct_otp=:acct_otp WHERE id=:id";
@@ -66,6 +69,7 @@ if(isset($_POST['wire_transfer'])){
                 'id'=>$account_id
             ]);
 
+            */
 
             if($page['billing_code']=='0') {
 
